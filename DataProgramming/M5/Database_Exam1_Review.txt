@@ -1,0 +1,160 @@
+DATABASE EXAM 1 REVIEW
+
+March 3rd 12:30 Lab Room
+
+Bring a 3x5 notecard handwritten on both sides with your notes. Also bring scratch paper.
+
+There will be diagrams on the exam.
+
+48 multiple choice questions.
+
+On lockdown browser, no phone.
+
+Modules and number of questions (M1: 5	M2: 7	M3: 19	M4: 6)
+
+Look for summaries of each module on folio to get some direction. 
+
+----------------------------------------------------------------------------------------------------------
+
+M1- Intro module (5 Questions)
+
+- definitions and concepts (look in the instuctions document on folio, might be in module 3) disavantages and advantages of using a database.
+- 5 questions (2points each)
+
+ANSWER:
+
+Data:
+Information:
+Metadata:
+Database:
+Database Management System (DBMS):
+File processing approach to data manegement:
+Key functionality of database management system:
+
+----------------------------------------------------------------------------------------------------------
+
+M2 - SDLC (7 questions)
+
+- an activity is done in (BLANK) phase of the SDLC. ANSWER.....
+  a) planning
+  b) analysis
+  c) design
+  d) implementation
+  e) maintenance 
+
+ANSWER:
+Describe the systems development life cycle and it's phases:
+Describe prototyping and it's phases:
+Compare and contrast the SDLC and prototyping:
+SDLS: planning, analysis, design, implementation, maintenance:
+Prototyping:
+---------------------------------------------------------------------------------------------------------- 
+  
+M3- ER Diagrams (19 questions total)
+
+- 10 questions on concepts and definitions
+- 9 questions where you look at an ERD and choose corresponding business rule
+	- Lab 2 (Review)
+	- Assign 1 and 2 (Review)
+	- MyFlix exercices 
+
+ANSWER:
+
+Entities:
+-Regular:
+-Weak:
+-Associative:
+
+Attributes:
+-Regular:
+-Identifier or primary key:
+-Composite:
+-Derived:
+-Multivalued:
+
+Relationships:
+-Degree - unary, binary, ternary:
+-Cardinality:
+		-1:1. 1:m, m:n 
+		-Minimum: optional vs, mandatory
+		-Maximum: one vs. many
+----------------------------------------------------------------------------------------------------------
+
+M4- Design (2 Questions)
+
+-Primary Key(PK)/Foreign Key(FK)
+	-PK is entity and FK is referential
+	-Examples of these with tables and data (2 questions)
+
+ANSWER:
+
+Keys:
+Primary Key:
+Entity Integrity:
+Foreign Key:
+Referential Integrity:
+
+Normalization:
+
+No normal form: multivalued attributes present.
+1NF: no multivalued attributes, partial dependencies exist.
+2NF:no multivalued attributes, partial dependencies, transitive dependencies exist.
+3NF:no multivalued attributes, no partial dependencies, no transitive dependencies.
+
+----------------------------------------------------------------------------------------------------------
+
+Definition Instructions:
+
+- Concepts) A student gpa can be calculated by your grades and credit hours.
+		a)composite
+		b)a primary key
+		c)derived ***ANSWER***
+		d)multivalued
+		
+- Concepts) ERD -> Relational Schema 
+
+----------------------------------------------------------------------------------------------------------
+
+ADDITIONAL INFO:
+
+There are 2 Questions that are worth 3 points related to ERD -> relational schema
+There are 3 Questions that are worth 2 points related to concepts.
+	
+	
+EXAM ANSWER EXAMPLE for the 2 Questions worth 3 Points:
+
+STUDENT: e-id, fname, lname
+SECTION: CRN, location
+STUDENT SECTION: e-id, CRN, grade
+
+----------------------------------------------------------------------------------------------------------
+
+Normalization 
+
+(2 questions)
+(3 definitions)
+(5 Concepts)
+	-What Normal Form? Why?
+	-Identify the dependencies
+	
+EXAMPLE: M4 Assign2 #2
+
+[r_num] [p_num] [sale_date] [prod_name] [prod_price] [vend_name] [quantity_sold]
+
+Identify depndencies, such as partial, transient, full, ect.
+
+What NF and Why?
+	1 NF as there are no multivalued but there are partials.
+	
+EXAMPLE ANSWER: 
+	PROD_REC: r_num, p_num, qty
+	REC: r_num, s_date
+	PROD: p_num, p_name, p_price, v_code
+	VENDOR: c_code, v_name
+	
+When describing an ER Diagram, "can" means optional, as in either-or.
+
+
+
+
+

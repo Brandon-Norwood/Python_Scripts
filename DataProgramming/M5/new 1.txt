@@ -1,0 +1,60 @@
+def midpoint(p1, p2):
+    
+    x_one, y_one = p1
+    x_two, y_two = p2
+
+    x_one = int(x_one)
+    x_two = int(x_two)
+    y_one = int(y_one)
+    y_two = int(y_two)
+
+    x = (x_one+x_two)/2 
+    y = (y_one+y_two)/2
+
+    midpoint = (x,y)
+
+    return midpoint
+
+p1 = input("Enter the x,y coordinates of the first point:")
+p2 = input("Enter the x,y coordinates of the second point:")
+
+p1 = p1.split(",")
+p1 = tuple(p1)
+p2 = p2.split(",")
+p2 = tuple(p2)
+
+try:
+    mid = midpoint(p1, p2)
+    print(f"Midpoint: {mid}")
+except:
+    print("You're Doing it Wrong! Enter coordinates using numerical values as x,y")
+	
+	
+
+
+
+
+
+def odd_numbers(number_range):
+    
+    start, end = number_range
+    
+    odd_num = []
+    
+    for num in range(start,end+1):
+        if num % 2 != 0:
+            odd_num.append(num)
+    
+    return tuple(odd_num)
+
+try:
+    start = int(input("Please enter a starting number"))
+    end = int(input("Please enter an ending number"))
+    
+except:
+    print("I Said Enter a 'Number!'")
+
+number_range = (start, end)
+
+odd_num = odd_numbers(number_range)
+print(odd_num)

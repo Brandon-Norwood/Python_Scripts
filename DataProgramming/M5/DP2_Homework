@@ -1,0 +1,13 @@
+fHandle = open(r'Untitled Folder/computing_courses.txt')
+
+for line in fHandle:
+    
+    
+    
+    index = line.find(' ')
+    line = line[index+1:]
+    
+    index = line.find(',')
+    courseNum = line[:index]
+    
+    print(courseNum)

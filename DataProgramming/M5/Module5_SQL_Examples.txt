@@ -1,0 +1,56 @@
+MODULE 5 SQL
+
+SELECT on multiple tables
+	JOIN
+	-PK/FK make
+	-regular (INNER)
+		-match rows on PK/FK
+		
+----------------------------------------------------------------------------------------------------------
+
+EXAMPLE 4: "MULTIPLE TABLE JOIN"
+
+SELECT customer.customer_id, customer.name, work.order_id, ordered.quantity, product.product_id,
+	   product_classes, standard_price, (ordered_quantity*standard_price) HS 'Total-Price')
+
+FROM customer 
+	JOIN order ON customer.customer_id = order.customer_id
+	JOIN order_line ON order.order_id = order_line.order_id 
+	JOIN product ON product.product_id = order_line.product_id
+	
+WHERE order.order_id = 1006;
+
+
+----------------------------------------------------------------------------------------------------------
+
+Subqueries:
+
+	***Use "I"N, "NOT IN"***
+(Do not use EXISTS, NOT EXISTS)
+
+SELECT 
+
+	IN /* NOT IN /*
+		(SELECT --
+		----------)
+		
+----------------------------------------------------------------------------------------------------------
+		
+EXAMPLE 5: Subquery example
+
+Two ways to do it...
+
+SELECT customer_id, customer_name
+FROM customer
+WHERE customer_id IN
+	(SELECT customer_id
+	FROM order)
+
+SELECT * customer.customer_id, customer_name
+FROM customer LEFT OUTER JOIN order
+	ON customer.customer_id = order.customer_id 
+	
+WHERE order_id IS NULL;
+
+
+	
